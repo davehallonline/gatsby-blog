@@ -1,4 +1,5 @@
 import React from "react"
+import "./layout.css"
 import { Link } from "gatsby"
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -6,7 +7,7 @@ const ListLink = props => (
   </li>
 )
 export default ({ children }) => (
-  <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
+  <div className="site">
     <header style={{ marginBottom: `1.5rem` }}>
       <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
         <h3 style={{ display: `inline` }}>davehall.dev</h3>
@@ -17,6 +18,6 @@ export default ({ children }) => (
         <ListLink to="/contact/">Contact</ListLink>
       </ul>
     </header>
-    {children}
+    <div className="site-content">{children}</div>
   </div>
 )
